@@ -21,7 +21,7 @@ public class LoadLapTime : MonoBehaviour {
 
 		MinDisplay.GetComponent<TextMeshProUGUI> ().text = "" + MinCount + ":";
 		SecDisplay.GetComponent<TextMeshProUGUI> ().text = "" + SecCount + ".";
-		MilliDisplay.GetComponent<TextMeshProUGUI> ().text = "" + MilliCount.ToString("F0");
+		MilliDisplay.GetComponent<TextMeshProUGUI> ().text = "" + MilliCount;
 		
 	}
 	
