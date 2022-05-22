@@ -9,12 +9,14 @@ public class RaceFinish : MonoBehaviour {
 	public GameObject FinishCam;
 	public GameObject ViewModes;
 	public GameObject CompleteTrig;
+    public GameObject Time;
 	public AudioSource FinishMusic;
 
 	void OnTriggerEnter () {
 		this.GetComponent<BoxCollider> ().enabled = false;
 		MyCar.SetActive (false);
 		CompleteTrig.SetActive (false);
+        Time.SetActive (false);
 		CarController.m_Topspeed = 0.0f;
 		MyCar.GetComponent<CarController> ().enabled = false;
 		MyCar.GetComponent<CarUserControl> ().enabled = false;

@@ -2659,6 +2659,7 @@ MonoBehaviour:
   FinishCam: {fileID: 1067896434}
   ViewModes: {fileID: 15116605}
   CompleteTrig: {fileID: 2034588761}
+  Time: {fileID: 804730748}
   FinishMusic: {fileID: 786027923}
 --- !u!65 &500171508
 BoxCollider:
