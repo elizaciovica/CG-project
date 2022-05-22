@@ -16,12 +16,12 @@ public class LapComplete : MonoBehaviour {
 	public GameObject LapCounter;
 	public int LapsDone;
 
-	//public float RawTime;
+	public float RawTime;
 
 	void OnTriggerEnter () {
 		LapsDone += 1;
-		//RawTime = PlayerPrefs.GetFloat("RawTime");
-		//if(LapTimeManager.RawTime <= RawTime) {
+		RawTime = PlayerPrefs.GetFloat("RawTime");
+		if(LapTimeManager.RawTime <= RawTime) {
 
 			if (LapTimeManager.SecondCount <= 9) {
 				SecondDisplay.GetComponent<TextMeshProUGUI> ().text = "0" + LapTimeManager.SecondCount + ".";
@@ -36,17 +36,17 @@ public class LapComplete : MonoBehaviour {
 			}
 
 			MilliDisplay.GetComponent<TextMeshProUGUI> ().text = "" + LapTimeManager.MilliCount.ToString("F0");
-		//}
+		}
 
 		PlayerPrefs.SetInt("MinSave", LapTimeManager.MinuteCount);
 		PlayerPrefs.SetInt("SecSave", LapTimeManager.SecondCount);
 		PlayerPrefs.SetFloat("MilliSave", LapTimeManager.MilliCount);
-		//PlayerPrefs.SetFloat("RawTime", LapTimeManager.RawTime);
+		PlayerPrefs.SetFloat("RawTime", LapTimeManager.RawTime);
 
 		LapTimeManager.MinuteCount = 0;
 		LapTimeManager.SecondCount = 0;
 		LapTimeManager.MilliCount = 0;
-		//LapTimeManager.RawTime = 0;
+		LapTimeManager.RawTime = 0;
 
 		LapCounter.GetComponent<TextMeshProUGUI> ().text = "" + LapsDone;
 
