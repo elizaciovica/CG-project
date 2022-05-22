@@ -13,11 +13,13 @@ public class CarChoice : MonoBehaviour {
         CarImport = GlobalCar.CarType;
         if (CarImport == 1)
         {
+            WhiteBody.SetActive(false);
             RedBody.SetActive(true);
         }
 
         if (CarImport == 2)
         {
+            WhiteBody.SetActive(false);
             BlueBody.SetActive(true);
         }
 
