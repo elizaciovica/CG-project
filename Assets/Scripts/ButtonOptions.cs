@@ -17,4 +17,8 @@ public class ButtonOptions : MonoBehaviour {
 		SceneManager.LoadScene (0);
 	}
 
+    public void Credits () {
+        SceneManager.LoadScene (3);
+    }
+
 }
