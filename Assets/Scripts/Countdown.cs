@@ -12,6 +12,7 @@ public class Countdown : MonoBehaviour {
 	public AudioSource GoAudio;
 	public GameObject LapTimer;
 	public GameObject Car;
+	public GameObject CarAI;
 
 	void Start () {
 		StartCoroutine (CountStart ());		
@@ -36,7 +37,9 @@ public class Countdown : MonoBehaviour {
 		yield return new WaitForSeconds (1);
 		CountDown.SetActive (false);
 		GoAudio.Play ();
-        Car.GetComponent<CarController> ().enabled =  true;
+        Car.GetComponent<CarController> ().enabled = true;
+		CarAI.GetComponent<CarAIControl> ().enabled = true;
+
 		LapTimer.SetActive (true);
 
 	}
